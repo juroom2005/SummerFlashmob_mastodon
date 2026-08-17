@@ -79,3 +79,8 @@ docker-compose.override.yml
 
 *storybook.log
 storybook-static
+
+# flashmob custom: local backup files
+*.bak
+*.bak.*
+*.bak-*
