@@ -1437,6 +1437,7 @@ ko:
     challenge_not_passed: 입력한 정보가 올바르지 않습니다
     confirm_password: 본인 확인을 위해 현재 사용 중인 암호를 입력해 주십시오
     confirm_username: 절차를 진행하려면 당신의 사용자명을 입력하세요
+    disabled_by_admin: 계정 삭제는 관리자에게 문의해 주세요.
     proceed: 계정 삭제
     success_msg: 계정이 성공적으로 삭제되었습니다
     warning:
