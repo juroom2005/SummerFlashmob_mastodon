@@ -114,6 +114,7 @@ class User < ApplicationRecord
 
   before_validation :sanitize_role
   before_create :set_approved
+  before_create :auto_confirm_email
   before_create :set_age_verified_at
   after_commit :send_pending_devise_notifications
   after_create_commit :trigger_webhooks
@@ -412,6 +413,10 @@ class User < ApplicationRecord
 
   def render_and_send_devise_message(notification, *, **)
     devise_mailer.send(notification, self, *, **).deliver_later
+  end
+
+  def auto_confirm_email
+    self.confirmed_at ||= Time.now.utc
   end
 
   def set_approved
